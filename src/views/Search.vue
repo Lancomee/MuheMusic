@@ -85,10 +85,7 @@ export default {
     };
   },
   computed: {
-<<<<<<< HEAD
     // 所有数据的总高度
-=======
->>>>>>> 91322d0 (虚拟列表)
     contentHeight() {
       return this.searchList.length * this.itemHeight + "px";
     },
@@ -140,15 +137,10 @@ export default {
     },
     // 虚拟列表
     updateVisibleData(scrollTop = 0) {
-<<<<<<< HEAD
-      //可视区域最多出现的数据条数
-=======
->>>>>>> 91322d0 (虚拟列表)
       const visibleCount = Math.ceil(
         this.$refs.scrollBox.clientHeight / this.itemHeight
       );
       console.log(visibleCount);
-<<<<<<< HEAD
       // 开始索引
        const start = Math.floor(scrollTop / this.itemHeight);
       //  结束索引
@@ -156,23 +148,15 @@ export default {
       // 可视区域显示的数据
       this.visibleData = this.searchList.slice(start, end);
       // 偏移量
-=======
-       const start = Math.floor(scrollTop / this.itemHeight);
-      const end = start + visibleCount;
       this.visibleData = this.searchList.slice(start, end);
-      
->>>>>>> 91322d0 (虚拟列表)
       this.$refs.content.style.webkitTransform = `translate3d(0, ${
         this.start * this.itemHeight
       }px, 0)`;
     },
-<<<<<<< HEAD
+
      //监听滚动事件，实时计算scrollTop
     handleScroll() {
       // 当前滚动的位置
-=======
-    handleScroll() {
->>>>>>> 91322d0 (虚拟列表)
       const scrollTop = this.$refs.scrollBox.scrollTop;
       console.log("scrollTop", scrollTop);
       this.updateVisibleData(scrollTop);
@@ -221,11 +205,7 @@ export default {
   padding: 0.2rem;
   .list-view {
     height: 460px;
-<<<<<<< HEAD
     overflow: auto;  /*只有这行代码写了，内容超出高度才会出现滚动条*/
-=======
-    overflow: auto;
->>>>>>> 91322d0 (虚拟列表)
     position: relative;
     border: 1px solid #aaa;
   }
